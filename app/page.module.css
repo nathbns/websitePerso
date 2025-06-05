@@ -129,7 +129,7 @@
 .terminalWindow {
   background: #1a1b26;
   border-radius: 8px;
-  box-shadow: 0 4px 24px #000a;
+  /*box-shadow: 0 4px 24px #000a;*/
   max-width: 600px;
   width: 95vw;
   margin: 0 auto;
@@ -212,7 +212,7 @@
   margin: 0 auto;
   background-color: #24283b;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
   overflow: hidden;
 }
 

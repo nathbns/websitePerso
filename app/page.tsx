@@ -164,7 +164,10 @@ export default function Home() {
                 <h2>About</h2>
                 <p>
                   ~ 3rd year Computer Science student, passionate about software
-                  development and low-level systems. I use Neovim btw.
+                  development and low-level systems.
+                </p>
+                <p className="mt-2">
+                  ~ I use Neovim btw.
                 </p>
               </div>
             )}
@@ -175,7 +178,7 @@ export default function Home() {
                   <li>~ Game dev: doodle jump like in C/C++</li>
                   <li>~ Desktop dev: matrix solver in C++ (using Qt)</li>
                   <li>~ Http server in C</li>
-                  <li>~ Other ...(learning Rust...)</li>
+                  <li>~ Other... (learning Rust btw)</li>
                 </ul>
               </div>
             )}
@@ -184,7 +187,10 @@ export default function Home() {
                 <h2>Links</h2>
                 <ul>
                   <li>
-                    <a href="https://github.com/nathbns">~ GitHub</a>
+                    <div className="flex flex-row items-center gap-2">
+                      <p>~</p>
+                      <a href="https://github.com/nathbns">GitHub</a>
+                    </div>
                   </li>
                   {/* <li>
                     <a href="#">LinkedIn</a>
