@@ -1,0 +1,378 @@
+.main {
+  min-height: 100vh;
+  background: #16161e;
+  color: #a9b1d6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #16161e;
+  padding: 1.5rem 0.5rem;
+}
+
+.asciiArt {
+  color: #7aa2f7;
+  font-size: 1.1rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px #24283b;
+  font-family: "JetBrains Mono", monospace;
+  white-space: pre;
+  word-break: break-all;
+  text-align: center;
+}
+
+.animatedTextLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.7rem;
+  margin-bottom: 2rem;
+}
+
+.animatedText {
+  color: #bb9af7;
+  font-size: 2.2rem;
+  letter-spacing: 0.1em;
+  font-family: "JetBrains Mono", monospace;
+  transition: opacity 0.3s;
+}
+
+.yourName {
+  color: #bb9af7;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.blinkingCursor {
+  display: inline-block;
+  width: 1ch;
+  min-width: 1ch;
+  color: #e0af68;
+  font-weight: bold;
+  font-size: 2.2rem;
+  margin-left: 0.1em;
+  vertical-align: middle;
+  transition: opacity 0.2s;
+  user-select: none;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.shortcutList {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.shortcutBtn {
+  background: #1a1b26;
+  border: 1.5px solid #414868;
+  color: #a9b1d6;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  margin-bottom: 0.5rem;
+}
+.shortcutBtn:hover,
+.shortcutBtn:focus {
+  background: #24283b;
+  color: #7aa2f7;
+  border: 1.5px solid #7aa2f7;
+}
+.shortcutKey {
+  color: #e0af68;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.splashHint {
+  margin-top: 2.5rem;
+  color: #565f89;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.terminalWindow {
+  background: #1a1b26;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px #000a;
+  max-width: 600px;
+  width: 95vw;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #414868;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.terminalIn {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+.terminalOut {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #24283b;
+  padding: 0.7rem 1.2rem;
+  border-bottom: 1.5px solid #414868;
+  position: relative;
+}
+.terminalDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.2rem;
+}
+.terminalTitle {
+  color: #565f89;
+  font-size: 1rem;
+  margin-left: 1rem;
+  flex: 1;
+  font-family: "JetBrains Mono", monospace;
+}
+.closeBtn {
+  background: none;
+  border: none;
+  color: #e0af68;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  margin-left: auto;
+  transition: color 0.2s;
+}
+.closeBtn:hover {
+  color: #f7768e;
+}
+.terminalContent {
+  padding: 2.2rem 2rem 1.2rem 2rem;
+  color: #a9b1d6;
+  font-size: 1.1rem;
+  min-height: 250px;
+}
+.terminalContent h2 {
+  color: #7aa2f7;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.terminalContent a {
+  color: #7aa2f7;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.terminalContent a:hover {
+  color: #bb9af7;
+}
+
+.terminal {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #24283b;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  background-color: #1f2335;
+  padding: 0.5rem 0.5rem 0;
+  border-bottom: 1px solid #414868;
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: #565f89;
+  padding: 0.5rem 1rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #a9b1d6;
+}
+
+.tab.active {
+  color: #7aa2f7;
+  background-color: #24283b;
+}
+
+.content {
+  padding: 2rem;
+}
+
+.section {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #7aa2f7;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #bb9af7;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  line-height: 1.6;
+  color: #a9b1d6;
+}
+
+.sectionTitle {
+  color: #7aa2f7;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #414868;
+  padding-bottom: 0.5rem;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillName {
+  color: #bb9af7;
+  font-size: 0.9rem;
+}
+
+.skillBar {
+  height: 8px;
+  background-color: #414868;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skillLevel {
+  height: 100%;
+  background-color: #7aa2f7;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.projects {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.project {
+  background-color: #1f2335;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #414868;
+}
+
+.projectTitle {
+  color: #7aa2f7;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.projectDescription {
+  color: #a9b1d6;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .asciiArt {
+    font-size: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  .animatedTextLine {
+    min-height: 1.7rem;
+    margin-bottom: 1.2rem;
+  }
+  .animatedText,
+  .blinkingCursor {
+    font-size: 1.1rem;
+  }
+  .shortcutBtn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .terminalWindow {
+    max-width: 99vw;
+    min-width: 0;
+  }
+  .terminalContent {
+    padding: 1.1rem 0.5rem 0.7rem 0.5rem;
+    font-size: 0.85rem;
+    min-height: 80px;
+  }
+  .terminalHeader {
+    padding: 0.4rem 0.3rem;
+    font-size: 0.85rem;
+  }
+  .terminalTitle {
+    font-size: 0.85rem;
+    margin-left: 0.5rem;
+  }
+  .closeBtn {
+    font-size: 0.95rem;
+  }
+  .terminalContent h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+}
