@@ -347,9 +347,14 @@
   .blinkingCursor {
     font-size: 1.1rem;
   }
+  .shortcutList {
+    gap: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
   .shortcutBtn {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+    min-width: 80px;
   }
   .terminalWindow {
     max-width: 99vw;
