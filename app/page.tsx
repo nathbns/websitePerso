@@ -126,7 +126,7 @@ export default function Home() {
           </div>
           <div className={styles.splashHint}>
             <span>
-              Press <b>a</b>, <b>p</b>, <b>l</b> or click a button
+              Press <b>a</b>, <b>p</b>, <b>l</b> or click a button like a noob
             </span>
           </div>
         </div>
